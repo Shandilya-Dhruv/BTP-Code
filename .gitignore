@@ -2,3 +2,4 @@ __pycache__/
 model/__pycache__/
 model/IAANet/__pycache__/
 .vscode/
+.venv/
