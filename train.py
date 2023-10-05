@@ -13,6 +13,8 @@ from tqdm import tqdm
 from utils import deb
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
 
+SIRST_Directory = '/home/ryu/Downloads/BTP-Code/datasets/SIRST3'
+
 parser = argparse.ArgumentParser(description="PyTorch LESPS train")
 parser.add_argument("--model_names", default=['IAANet'], nargs='+', 
                     help="model_name: 'ACM', 'ALCNet', 'DNANet'")                 
@@ -27,7 +29,7 @@ parser.add_argument("--LESPS_f", default=1, type=int, help="Evolution frequency,
 parser.add_argument("--img_norm_cfg", default=None, type=dict,
                     help="specific a img_norm_cfg, default=None (using img_norm_cfg values of each dataset)")
 
-parser.add_argument("--dataset_dir", default='/home/dhruv/Desktop/BTP/BTP-code/datasets/SIRST3', type=str, help="train_dataset_dir, default: './dataset")
+parser.add_argument("--dataset_dir", default=SIRST_Directory, type=str, help="train_dataset_dir, default: './dataset")
 parser.add_argument("--batchSize", type=int, default=1, help="Training batch sizse, default: 16")
 parser.add_argument("--patchSize", type=int, default=256, help="Training patch size, default: 256")
 parser.add_argument("--save", default='./log4', type=str, help="Save path, default: './log")
