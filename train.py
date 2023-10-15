@@ -13,7 +13,7 @@ from tqdm import tqdm
 from utils import deb
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
 
-SIRST_Directory = '/home/ryu/Downloads/BTP-Code/datasets/SIRST3'
+SIRST_Directory = '/home/dhruv_s.iitr/BTP/datasets/SIRST3'
 
 parser = argparse.ArgumentParser(description="PyTorch LESPS train")
 parser.add_argument("--model_names", default=['IAANet'], nargs='+', 
