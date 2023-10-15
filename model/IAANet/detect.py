@@ -21,7 +21,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     
     os.makedirs(args.save_path, exist_ok=True)
-    device = torch.device("cpu" if torch.cpu.is_available() else "cpu")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     #####################################
     #dataset 
     if args.folder:

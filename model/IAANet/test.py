@@ -80,7 +80,7 @@ if __name__ == '__main__':
     parser.add_argument('--fast', action='store_true', help='fast inference')
     args = parser.parse_args()
 
-    device = torch.device("cpu" if torch.cpu.is_available() else "cpu")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     #####################################
     model = torch.load(args.weights)
     model.to(device)

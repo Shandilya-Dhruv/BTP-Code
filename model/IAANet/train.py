@@ -53,7 +53,7 @@ if __name__ == '__main__':
         yaml.dump(vars(args), f)
     #####################################
     #device
-    device = torch.device("cpu" if torch.cpu.is_available() else "cpu")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     cudnn.benchmark, cudnn.deterministic = True, False
     #  Model #
     #Region Proposal Networks

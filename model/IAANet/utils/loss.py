@@ -94,7 +94,7 @@ class ComputerLoss(nn.Module):
         return loss, torch.cat((lbox, lobj.unsqueeze(dim=0), dloss, sloss.unsqueeze(dim=0), loss)).detach()
 
 class SegLoss(nn.Module):
-    def __init__(self, posw=1, mode=None, device='cpu'):
+    def __init__(self, posw=1, mode=None, device='cuda'):
         super(SegLoss, self).__init__()
         BCE = nn.BCEWithLogitsLoss(pos_weight=torch.tensor([posw], device=device))
         #focal loss?

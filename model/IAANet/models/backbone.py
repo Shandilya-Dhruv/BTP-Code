@@ -20,7 +20,7 @@ class backbone(nn.Module):
         #x y w h obj 
         self.detect = nn.Conv2d(self.num_channel, 5, kernel_size=(1,1), stride=(1,1))
 
-    def forward(self, x, device='cpu'):
+    def forward(self, x, device='cuda'):
         src = self.body(x)
         src = src['0']
         x = self.detect(src)
@@ -101,7 +101,7 @@ if __name__ == '__main__':
     input = torch.rand(1,1,146,256)
     backbone = backbone(mode='bbox')
     model = region_propose(backbone)
-    model = model.to('cpu')
-    output = model(input.to('cpu'))
+    model = model.to('cuda')
+    output = model(input.to('cuda'))
 
     print(output.shape)

@@ -31,7 +31,7 @@ class Net(nn.Module):
         elif model_name == 'IAANet':
             #  Model #
             #Region Proposal Networks
-            region_module = torch.load('model/IAANet/pretrained/rpn.pt', map_location=torch.device('cpu'))
+            region_module = torch.load('model/IAANet/pretrained/rpn.pt')
             region_module.trainable = False
 
             #Attention Encoder
