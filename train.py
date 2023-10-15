@@ -56,7 +56,7 @@ def train():
     update_epoch_loss = []
     start_click = 0
     
-    net = Net(model_name=opt.model_name, mode='train').cpu()
+    net = Net(model_name=opt.model_name, mode='train').cuda()
     if opt.resume:
         ckpt = torch.load(opt.resume)
         net.load_state_dict(ckpt['state_dict'])
@@ -71,7 +71,7 @@ def train():
     for idx_epoch in range(epoch_state, opt.nEpochs):
         for idx_iter, (img, gt_mask) in enumerate(train_loader):
             net.train()
-            img, gt_mask = Variable(img).cpu(), Variable(gt_mask).cpu()
+            img, gt_mask = Variable(img).cuda(), Variable(gt_mask).cuda()
             pred = net.forward(img)
             loss = net.loss(pred, gt_mask)
             total_loss_epoch.append(loss.detach().cpu())

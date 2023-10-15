@@ -40,6 +40,8 @@ def seed_pytorch(seed=42):
     os.environ['PYTHONHASHSEED'] = str(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
     
 def random_crop(img, mask, patch_size): # HR: N*H*W
     h, w = img.shape

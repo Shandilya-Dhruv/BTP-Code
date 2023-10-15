@@ -157,13 +157,13 @@ def conv1x1(in_planes, out_planes, stride=1):
 #########################################################
 ###2.测试ASKCResUNet
 if __name__ == '__main__':
-    DEVICE = torch.device("cpu" if torch.cpu.is_available() else "cpu") # 让torch判断是否使用GPU，建议使用GPU环境，因为会快很多
+    DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu") # 让torch判断是否使用GPU，建议使用GPU环境，因为会快很多
     layers = [3] * 3
     channels = [x * 1 for x in [8, 16, 32, 64]]
     in_channels = 3
     model= ASKCResUNet(in_channels, layers=layers, channels=channels, fuse_mode='AsymBi',tiny=False, classes=1)
 
-    model=model.cpu()
+    model=model.cuda()
     DATA = torch.randn(8,3,480,480).to(DEVICE)
 
     output=model(DATA)

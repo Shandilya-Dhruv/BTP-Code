@@ -33,7 +33,7 @@ def test():
     test_set = TestSetLoader(opt.dataset_dir, opt.train_dataset_name, opt.test_dataset_name, opt.img_norm_cfg)
     test_loader = DataLoader(dataset=test_set, num_workers=1, batch_size=1, shuffle=False)
     
-    net = Net(model_name=opt.model_name, mode='test').cpu()
+    net = Net(model_name=opt.model_name, mode='test').cuda()
     net.load_state_dict(torch.load(opt.pth_dir)['state_dict'])
     net.eval()
     
@@ -41,7 +41,7 @@ def test():
     eval_PD_FA = PD_FA()
     with torch.no_grad():
         for idx_iter, (img, gt_mask, size, img_dir) in enumerate(test_loader):
-            img = Variable(img).cpu()
+            img = Variable(img).cuda()
             pred = net.forward(img)
             pred = pred[:,:,:size[0],:size[1]]
             gt_mask = gt_mask[:,:,:size[0],:size[1]]
