@@ -1,0 +1,28 @@
+Aug 27 15:56:26 Epoch---1, total_loss---9065.918945,
+Evolution mask pixAcc, mIoU:	(0.027160493656992912, 0.027160493827160494)
+pixAcc, mIoU:	(1.0, 0.0007083605692046396)
+PD, FA:	(0.0, 1.0)
+Aug 27 15:56:59 Epoch---2, total_loss---5717.195801,
+Evolution mask pixAcc, mIoU:	(0.027160493656992912, 0.027160493827160494)
+pixAcc, mIoU:	(0.992277979850769, 0.0007082582359133775)
+PD, FA:	(0.0, 0.9924159049987793)
+Aug 27 15:57:26 Epoch---3, total_loss---5480.484375,
+Aug 27 15:57:37 Epoch---4, total_loss---4696.638184,
+Evolution mask pixAcc, mIoU:	(0.027160493656992912, 0.027160493827160494)
+pixAcc, mIoU:	(0.054054055362939835, 0.03167420814479638)
+PD, FA:	(0.25, 0.0004895619349554181)
+Aug 27 15:58:05 Epoch---5, total_loss---3686.028564,
+Aug 27 15:58:15 Epoch---6, total_loss---3311.531982,
+Evolution mask pixAcc, mIoU:	(0.027160493656992912, 0.027160493827160494)
+pixAcc, mIoU:	(0.0, 0.0)
+PD, FA:	(0.0, 0.0)
+Aug 27 15:58:43 Epoch---7, total_loss---3064.169434,
+Aug 27 15:58:54 Epoch---8, total_loss---2800.185791,
+Evolution mask pixAcc, mIoU:	(0.027160493656992912, 0.027160493827160494)
+pixAcc, mIoU:	(0.0, 0.0)
+PD, FA:	(0.0, 0.0)
+Aug 27 15:59:21 Epoch---9, total_loss---2660.548340,
+Aug 27 15:59:32 Epoch---10, total_loss---2490.984863,
+Evolution mask pixAcc, mIoU:	(0.3580246865749359, 0.26752767527675275)
+pixAcc, mIoU:	(0.0, 0.0)
+PD, FA:	(0.0, 3.2819792977534235e-05)

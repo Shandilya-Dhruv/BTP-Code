@@ -1,0 +1,4 @@
+Aug 26 16:35:38 Epoch---1, total_loss---3816.404053,
+Aug 26 16:37:35 Epoch---2, total_loss---1159.422974,
+Aug 26 16:39:31 Epoch---3, total_loss---594.077393,
+Aug 26 16:41:27 Epoch---4, total_loss---351.325623,

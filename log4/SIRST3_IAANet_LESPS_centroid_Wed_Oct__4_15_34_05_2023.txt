@@ -1,0 +1,2 @@
+Oct  4 15:34:56 Epoch---1, total_loss---102.789848,
+Evolution mask pixAcc, mIoU:	(0.04878048598766327, 0.04878048780487805)
